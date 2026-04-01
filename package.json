@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "serve": "firebase serve --only hosting",
-    "deploy": "firebase deploy --only hosting"
+    "deploy": "firebase deploy --only hosting --project avantgarderms-6b933",
+    "deploy:token": "firebase deploy --only hosting --project avantgarderms-6b933 --token \"$FIREBASE_TOKEN\"",
+    "deploy:script": "bash scripts/deploy-hosting.sh"
   },
   "devDependencies": {
     "firebase-tools": "^14.0.0"

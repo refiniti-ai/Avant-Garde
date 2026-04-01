@@ -1,0 +1,18 @@
+COMPLETED AUTOMATICALLY
+- Code is on GitHub: https://github.com/refiniti-ai/Avant-Garde (branch main)
+- Firebase project id is wired: avantgarderms-6b933 (.firebaserc, npm scripts, workflow)
+
+YOU MUST DO ONCE (requires your browser / accounts — cannot be automated here)
+
+1) GitHub Actions deploy
+   Firebase Console → Project avantgarderms-6b933 → Project settings → Service accounts
+   → Generate new private key → GitHub repo → Settings → Secrets and variables → Actions
+   → New secret: name FIREBASE_SERVICE_ACCOUNT_AVANTGARDERMS_6B933 → paste entire JSON
+   → Actions tab → “Deploy to Firebase Hosting” → Run workflow (workflow_dispatch)
+
+2) Local Firebase CLI (this machine showed expired credentials)
+   Terminal:  firebase login --reauth
+   Then:      npm run deploy
+   Or use a service account: export GOOGLE_APPLICATION_CREDENTIALS=/path/to/key.json && npm run deploy
+
+Never commit the JSON key or .env with secrets.

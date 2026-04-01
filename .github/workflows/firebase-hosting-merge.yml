@@ -1,10 +1,10 @@
-# Deploys Hosting when you push to main. Add the service account secret in
-# GitHub: Settings → Secrets and variables → Actions.
+# Requires repo secret FIREBASE_SERVICE_ACCOUNT_AVANTGARDERMS_6B933 (service account JSON).
 name: Deploy to Firebase Hosting
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
