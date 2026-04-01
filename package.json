@@ -1,0 +1,11 @@
+{
+  "name": "avant-garde",
+  "private": true,
+  "scripts": {
+    "serve": "firebase serve --only hosting",
+    "deploy": "firebase deploy --only hosting"
+  },
+  "devDependencies": {
+    "firebase-tools": "^14.0.0"
+  }
+}
